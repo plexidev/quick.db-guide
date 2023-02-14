@@ -1,26 +1,4 @@
-# Astro Starter Kit: Docs Site
-
-```bash
-npm create astro@latest -- --template docs
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/docs)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/docs)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![docs](https://user-images.githubusercontent.com/4677417/186189283-0831b9ab-d6b9-485d-8955-3057e532ab31.png)
-
-## Features
-
-- ✅ **Full Markdown support**
-- ✅ **Responsive mobile-friendly design**
-- ✅ **Sidebar navigation**
-- ✅ **Search (powered by Algolia)**
-- ✅ **Multi-language i18n**
-- ✅ **Automatic table of contents**
-- ✅ **Automatic list of contributors**
-- ✅ (and, best of all) **dark mode**
+# Quick.db Documentation
 
 ## 🧞 Commands
 
@@ -85,15 +63,15 @@ The sidebar navigation is controlled by the `SIDEBAR` variable in your `src/conf
 
 ```ts
 export const SIDEBAR = {
-  en: [
-    { text: "Section Header", header: true },
-    { text: "Introduction", link: "en/introduction" },
-    { text: "Page 2", link: "en/page-2" },
-    { text: "Page 3", link: "en/page-3" },
+    en: [
+        { text: "Section Header", header: true },
+        { text: "Introduction", link: "en/introduction" },
+        { text: "Page 2", link: "en/page-2" },
+        { text: "Page 3", link: "en/page-3" },
 
-    { text: "Another Section", header: true },
-    { text: "Page 4", link: "en/page-4" },
-  ],
+        { text: "Another Section", header: true },
+        { text: "Page 4", link: "en/page-4" },
+    ],
 };
 ```
 
