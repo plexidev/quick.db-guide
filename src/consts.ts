@@ -24,9 +24,9 @@ export const COMMUNITY_INVITE_URL = `https://discord.gg/plexidev`;
 
 // TODO: See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'XXXXXXXXXX',
-	appId: 'XXXXXXXXXX',
-	apiKey: 'XXXXXXXXXX',
+	indexName: import.meta.env.ALGOLIA_INDEX_NAME,
+	appId: import.meta.env.ALGOLIA_APP_ID,
+	apiKey: import.meta.env.ALGOLIA_API_KEY,
 };
 
 export type Sidebar = Record<
