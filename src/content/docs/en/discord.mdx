@@ -1,0 +1,30 @@
+---
+title: "Discord Integration"
+description: "Learn how to integrate quick.db with Discord.js"
+---
+
+### Discord.js
+
+One of the most common usages for quick.db is with discord.js, below is an example of how that might look.
+The following code is a messageCreate handler for tracking the messages of a user, separated by guild.
+
+```js
+const { Client } = require("discord.js");
+const client = new Client();
+
+const { QuickDB } = require("quick.db");
+const db = new QuickDB();
+
+client.on("messageCreate", async (message) => {
+    const authorId = message.author.id;
+
+    // Increment user's messageCount by 1
+    await db.add(`messageCount_${authorId}`, 1);
+
+    // Output user's messageCount. Typically, this would be output in a separate command.
+    let messageCount = await db.get(`messageCount_${authorId}`);
+    console.log(
+        `User with the ID of ${authorId} has ${messageCount} messages.`
+    );
+});
+```

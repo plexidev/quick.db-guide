@@ -1,0 +1,53 @@
+---
+title: "Migration Guide"
+description: "This page will help in migrating from quick.db 7.x.x and 8.x.x to 9.0.0."
+---
+
+### Initialization
+
+The way to initialize quick.db has been changed.
+
+```js
+// Quick.db before
+const db = require("quick.db");
+
+// Now
+const { QuickDB } = require("quick.db");
+const db = new QuickDB();
+```
+
+### Tables
+
+The table function no longer uses the new keyboard.
+
+```js
+// Quick.db before
+const table = new db.table("my_table");
+
+// Now
+const table = db.table("my_table");
+```
+
+### Subtract
+
+This function has been renamed to sub to keep the naming convention of the add method.
+
+```js
+// Quick.db before
+await db.subtract("mykey", 10);
+
+// Now
+await db.sub("mykey", 10);
+```
+
+### Async/Await
+
+Quick.db now uses async and await for all methods.
+
+```js
+// Quick.db before
+db.add("mykey", 10);
+
+// Now
+await db.add("mykey", 10);
+```

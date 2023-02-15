@@ -16,6 +16,37 @@ Quick.db is an open-source package meant to provide an easy way for beginners an
 
 ## Installation
 
+First, install the core package.
+
 ```md
 npm install quick.db
+```
+
+You can choose either better-sqlite3 or promise-mysql as your driver. If you're not sure, you should use better-sqlite3.
+
+### better-sqlite3
+
+```js
+const { QuickDB } = require("quick.db");
+const db = new QuickDB();
+```
+
+### promise-mysql
+
+```js
+const { QuickDB, MySQLDriver } = require("quick.db");
+
+(async () => {
+    const mysql = new MySQLDriver({
+        host: "localhost",
+        user: "me",
+        password: "secret",
+        database: "my_db",
+    });
+
+    // Important: Connect to MySQL server before using it
+    await mysql.connect();
+
+    const db = new QuickDB({ driver: mysql });
+})();
 ```

@@ -37,8 +37,11 @@ export const SIDEBAR: Sidebar = {
 	en: {
 		'Welcome': [
 			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 3', link: 'en/page-3' },
+			{ text: 'Basic Usage', link: 'en/basic-usage' }
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'Misc.': [
+			{ text: 'Migration', link: 'en/migration' },
+			{ text: 'Discord Integration', link: 'en/discord' }
+		],
 	},
 };
