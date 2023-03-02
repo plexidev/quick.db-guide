@@ -1,5 +1,8 @@
 # Quick.db Documentation
 
+https://docs.plexidev.org <br>
+https://quickdb.js.org
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -44,11 +47,3 @@ export const SIDEBAR = {
 ````
 
 Note the top-level `en` key: This is needed for multi-language support. You can change it to whatever language you'd like, or add new languages as you go. More details on this below.
-
-### Search (Powered by Algolia)
-
-[Algolia](https://www.algolia.com/) offers a free service to qualified open source projects called [DocSearch](https://docsearch.algolia.com/). If you are accepted to the DocSearch program, provide your API Key & index name in `src/config.ts` and a search box will automatically appear in your site header.
-
-Note that Aglolia and Astro are not affiliated. We have no say over acceptance to the DocSearch program.
-
-If you'd prefer to remove Algolia's search and replace it with your own, check out the `src/components/Header.astro` component to see where the component is added.
