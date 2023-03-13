@@ -40,6 +40,15 @@ await db.set("myUser", { balance: 500 }); // Returns -> { balance: 500 }
 await db.get("myUser"); // Returns -> { balance: 500 }
 ```
 
+### Delete
+
+How to delete keys you have previously created.
+
+```js
+// Deleting the key "myKey"
+await db.delete("myKey"); // Returns -> "myValue"
+```
+
 ### Dot Notation
 
 You can use dot notation in the key parameter to modify the associated object's properties. Notice below how "myUser" is the key, although the property "balance" is being set and get.
