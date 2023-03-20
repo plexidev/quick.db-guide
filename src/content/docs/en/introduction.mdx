@@ -5,7 +5,7 @@ description: "Introduction to Quick.db"
 
 import * as Icon from "@astropub/icons";
 
-> You're currently viewing our work-in-progress documentation. For our legacy documentation, please visit [here](https://plexidev.gitbook.io/quickdb/).
+> You're currently viewing our work-in-progress guide. For our legacy documentation, please visit [here](https://plexidev.gitbook.io/quickdb/). Additionally, auto-generated documentation can be found [here](https://docs.plexidev.org/classes/QuickDB.html).
 
 **Welcome to Quick.db!**
 
@@ -39,16 +39,16 @@ const db = new QuickDB();
 const { QuickDB, MySQLDriver } = require("quick.db");
 
 (async () => {
-    const mysql = new MySQLDriver({
-        host: "localhost",
-        user: "me",
-        password: "secret",
-        database: "my_db",
-    });
+  const mysql = new MySQLDriver({
+    host: "localhost",
+    user: "me",
+    password: "secret",
+    database: "my_db",
+  });
 
-    // Important: Connect to MySQL server before using it
-    await mysql.connect();
+  // Important: Connect to MySQL server before using it
+  await mysql.connect();
 
-    const db = new QuickDB({ driver: mysql });
+  const db = new QuickDB({ driver: mysql });
 })();
 ```
