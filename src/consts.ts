@@ -17,7 +17,7 @@ export const KNOWN_LANGUAGES = {
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/plexidev/quick.db-docs/tree/master`;
+export const GITHUB_EDIT_URL = `https://github.com/plexidev/quick.db-guide/tree/master`;
 
 export const DISCORD_URL = `https://discord.gg/plexidev`;
 export const TWITTER_URL = "https://twitter.com/plexidev";
