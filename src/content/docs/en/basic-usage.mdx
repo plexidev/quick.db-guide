@@ -74,7 +74,6 @@ await db.set("myUser.items", ["Sword", "Shield", "Health Potion"]); // Returns -
 // Some additional helper methods for arrays include push, pull, and has
 await db.push("myUser.items", "Armor"); // Returns -> { balance: 700, items: [ 'Sword', 'Shield', 'Health Potion', 'Armor' ] }
 await db.pull("myUser.items", "Health Potion"); // Returns -> { balance: 700, items: [ 'Sword', 'Shield', 'Armor' ] }
-await db.has("myUser.items", "Sword"); // Returns -> true
 ```
 
 ### Add & Subtract
