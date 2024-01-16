@@ -1,6 +1,6 @@
 ---
 title: "Migration Guide"
-description: "This page will help in migrating from quick.db 7.x.x and 8.x.x to 9.0.0."
+description: "This page will help in migrating from quick.db 7.x.x and 8.x.x and 9.x.x to quick.db 10.0.0"
 ---
 
 ### Initialization
@@ -51,3 +51,77 @@ db.add("mykey", 10);
 // Now
 await db.add("mykey", 10);
 ```
+
+## Added features
+
+### Close Function
+```js
+// Quick.db now
+const db = new QuickDB();
+await db.init();
+await db.close();
+```
+The close function is added to close the connection to the database. Use it as shown in the example above.
+
+### Update Function
+
+```js
+// Quick.db now
+const db = new QuickDB();
+await db.init();
+await db.set("test", {"nice": 1, "other": 2, "neat": 3});
+await db.update("test", {other: 3, neat: 4, newProp: "oof"});
+console.log(await db.get("test"));
+```
+
+The update function is added to save multiple keys from an object without affecting other keys. Update your code to use this function as demonstrated in the example above.
+
+## Changed features
+
+Here's a list of changes in quick.db v10.
+
+### Singleton Functions
+
+Before:
+```js
+// Quick.db before
+const instance = db.createSingleton("my_singleton");
+```
+
+Now:
+```js
+// Quick.db now
+const instance = db.registerSingleton("my_singleton");
+```
+
+OR 
+```js
+// Quick.db now
+const instance = db.getSingleton("my_singleton");
+```
+
+To update your code, replace createSingleton with either registerSingleton or getSingleton, depending on your use case.
+
+### Table functions returning promises.
+
+Before:
+```js
+// Quick.db before
+const table = new db.table("my_table");
+```
+
+Now:
+```js
+// Quick.db now
+const tablePromise = db.table("my_table");
+```
+
+The table function now returns a promise with the quick.db instance. Update your code accordingly to handle the promise.
+
+## Removed features
+
+### tableAsync
+
+The tableAsync function has been removed since the table function is now asynchronous by default.
+
+Remove any references to tableAsync in your code.
